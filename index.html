@@ -1,269 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Resume/Imdadul Imran</title>
-	<link rel="stylesheet" href="styles.css">
-	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD. Imdadul Hossain Imran - IT/CS Resume</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define the Inter font and a sleek print style */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e2e8f0; /* Light slate background */
+            display: flex;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+
+        /* Custom color configuration for a professional, artistic look */
+        .resume-container {
+            max-width: 1200px;
+            width: 95%;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .primary-bg { background-color: #1a5e88; } /* Deep Blue */
+        .secondary-color { color: #00bcd4; } /* Cyan/Teal Accent */
+        .secondary-bg { background-color: #00bcd4; }
+
+        /* Print Styles */
+        @media print {
+            body { background-color: white; padding: 0; }
+            .resume-container { box-shadow: none; border: none; max-width: 100%; width: 100%; }
+            .no-print { display: none !important; }
+        }
+
+        /* Utility for creating custom progress bars (for the artistic skill section) */
+        .skill-bar {
+            height: 6px;
+            border-radius: 9999px;
+            background-color: #cbd5e1; /* Slate-300 */
+        }
+        .skill-bar-fill {
+            height: 6px;
+            border-radius: 9999px;
+            background-color: #00bcd4; /* secondary-color */
+        }
+        
+        .llm-button {
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .llm-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1a5e88',
+                        'secondary-teal': '#00bcd4',
+                        'light-gray': '#f5f7fa',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
 <body>
 
-<div class="resume">
-   <div class="resume_left">
-     <div class="resume_profile">
-       <img src="IMG_3556 1.JPG" alt="profile_pic">
-     </div>
-     <div class="resume_content">
-       <div class="resume_item resume_info">
-         <div class="title">
-           <p class="bold">Imdadul Imran</p>
-           <p class="regular">Engineer</p>
-         </div>
-         <ul>
-           <li>
-             <div class="data">
-              🚩 98, Central Road, Dhanmondi, Dhaka.
-             </div>
-           </li>
-           <li>
-             <div class="data">
-              ☎ +880 1818-544517
-             </div>
-           </li>
-           <li>
-             <div class="data">
-              📧 r8imran@gmail.com
-             </div>
-           </li>
-          
-         </ul>
-       </div>
-       <div class="resume_item resume_skills">
-         <div class="title">
-           <p class="bold">skill's</p>
-         </div>
-         <ul>
-          <li>
-            <div class="skill_name">
-              Sales
-            </div>
-            <div class="skill_progress">
-              <span style="width: 91%;"></span>
-            </div>
-            <div class="skill_per">91%</div>
-          </li>
-          <li>
-            <div class="skill_name">
-              Inbound
-            </div>
-            <div class="skill_progress">
-              <span style="width: 98%;"></span>
-            </div>
-            <div class="skill_per">98%</div>
-          </li>
-          <li>
-            <div class="skill_name">
-              Software
-            </div>
-            <div class="skill_progress">
-              <span style="width: 95%;"></span>
-            </div>
-            <div class="skill_per">95%</div>
-          </li>
-          
-          <li>
-            <div class="skill_name">
-              C
-            </div>
-            <div class="skill_progress">
-              <span style="width: 45%;"></span>
-            </div>
-            <div class="skill_per">45%</div>
-          </li>
-          <li>
-            <div class="skill_name">
-              My SQL
-            </div>
-            <div class="skill_progress">
-              <span style="width: 20%;"></span>
-            </div>
-            <div class="skill_per">20%</div>
-          </li>
-           <li>
-             <div class="skill_name">
-               HTML
-             </div>
-             <div class="skill_progress">
-               <span style="width: 70%;"></span>
-             </div>
-             <div class="skill_per">70%</div>
-           </li>
-           <li>
-             <div class="skill_name">
-               CSS
-             </div>
-             <div class="skill_progress">
-               <span style="width: 40%;"></span>
-             </div>
-             <div class="skill_per">40%</div>
-           </li>
-           <li>
-            <div class="skill_name">
-              Js
-            </div>
-            <div class="skill_progress">
-              <span style="width: 10%;"></span>
-            </div>
-            <div class="skill_per">10%</div>
-          </li>
-          <li>
-            <div class="skill_name">
-              SQA
-            </div>
-            <div class="skill_progress">
-              <span style="width: 5%;"></span>
-            </div>
-            <div class="skill_per">5%</div>
-          </li> 
-          <li>
-            <div class="skill_name">
-              Python
-            </div>
-            <div class="skill_progress">
-              <span style="width: 5%;"></span>
-            </div>
-            <div class="skill_per">5%</div>
-          </li>           
-           
-         </ul>
-       </div>
-       <div class="resume_item resume_social">
-         <div class="title">
-           <p class="bold">Social</p>
-         </div>
-         <ul>
-           <li>
-             <div class="icon">
-               <i class="fab fa-facebook-square"></i>
-             </div>
-             <div class="data">
-               <p class="semi-bold">Facebook</p>
-               <p>imdadul.imran.2</p>
-             </div>
-           </li>
-           <li>
-             <div class="icon">
-               <i class="fab fa-twitter-square"></i>
-             </div>
-             <div class="data">
-               <p class="semi-bold">Twitter</p>
-               <p>@raddon88</p>
-             </div>
-           </li>
-           <li>
-             <div class="icon">
-               <i class="fab fa-youtube"></i>
-             </div>
-             <div class="data">
-               <p class="semi-bold">Youtube</p>
-               <p>@imdadulimran</p>
-             </div>
-           </li>
-           <li>
-             <div class="icon">
-               <i class="fab fa-linkedin"></i>
-             </div>
-             <div class="data">
-               <p class="semi-bold">Linkedin</p>
-               <p>imdadul-imran</p>
-             </div>
-           </li>
-         </ul>
-       </div>
-     </div>
-  </div>
-  <div class="resume_right">
-    <div class="resume_item resume_about">
-        <div class="title">
-           <p class="bold">About me</p>
-         </div>
-        <p>Challenge driven, energetic and motivated to make a difference as an Engineer. 
-            I have professional track record in both marketing and sales as an individual contributor and as a manager. 
-            My domain is spread across different branches of IT and software industry. I’ve decided to start my career in a Group of companies or MNC 
-            or Software firm/Engineering company to build my career for a long-term goal.</p>
-    </div>
-    <div class="resume_item resume_work">
-        <div class="title">
-           <p class="bold">Work Experience</p>
-         </div>
-        <ul>
-          <li>
-            <div class="date">Oct 2022 - Jan 2023 [Contractual]</div> 
-            <div class="info">
-                 <p class="semi-bold">Daraz Bangladesh Ltd</p> 
-              <p>CXP Agent - CS Inbound</p>
-            </div>
-        </li>  
-          <li>
-                <div class="date">2019 - Present </div> 
-                <div class="info">
-                     <p class="semi-bold">Cloud MarCom</p> 
-                  <p>IT Support</p>
+    <div id="resume" class="resume-container bg-white rounded-lg overflow-hidden grid md:grid-cols-3">
+        
+        <!-- SIDEBAR (Left Column: 1/3 width on desktop, full width on mobile) -->
+        <aside class="primary-bg text-white p-6 md:p-8 col-span-1">
+            
+            <!-- Profile Photo & Contact -->
+            <div class="flex flex-col items-center mb-8">
+                <!-- Placeholder for the original image -->
+                <div class="w-32 h-32 bg-gray-200 rounded-full overflow-hidden mb-4 border-4 border-white">
+                    <img src="IMG_3556 1.JPG" alt="Profile" class="w-full h-full object-cover">
                 </div>
-            </li>
-            <li>
-                <div class="date">2015 - 2017</div>
-                <div class="info">
-                       <p class="semi-bold">SiS Engineering</p> 
-                    <p>Supervisor</p>
+                <h1 class="text-3xl font-extrabold text-center uppercase tracking-wider">MD. IMDADUL</h1>
+                <h2 class="text-xl font-light text-secondary-teal text-center mt-1">HOSSAIN IMRAN</h2>
+            </div>
+            
+            <div class="space-y-6">
+                
+                <!-- Contact Info -->
+                <section>
+                    <h3 class="text-lg font-semibold border-b-2 border-secondary-teal pb-1 mb-3 uppercase tracking-wider">Contact</h3>
+                    <ul class="text-sm space-y-2">
+                        <li class="flex items-start">
+                            <span class="secondary-color mr-3 flex-shrink-0">📍</span>
+                            Central Road, Hatirpool, Dhanmondhi, Dhaka-1205
+                        </li>
+                        <li class="flex items-center">
+                            <span class="secondary-color mr-3 flex-shrink-0">📱</span>
+                            01818544517
+                        </li>
+                        <li class="flex items-center">
+                            <span class="secondary-color mr-3 flex-shrink-0">📧</span>
+                            r8imran@gmail.com
+                        </li>
+                        <li class="flex items-start">
+                            <span class="secondary-color mr-3 flex-shrink-0">🌐</span>
+                            <a href="https://raddon88.github.io/Resume" target="_blank" class="hover:underline">raddon88.github.io/Resume</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Skills & Computer Literacy -->
+                <section>
+                    <h3 class="text-lg font-semibold border-b-2 border-secondary-teal pb-1 mb-3 uppercase tracking-wider">Technical Skills</h3>
+                    <div class="space-y-4 text-sm">
+                        <!-- Technical Proficiencies (Artistic representation with bars) -->
+                        <div>
+                            <p class="font-medium mb-1">Customer & IT Support</p>
+                            <div class="skill-bar"><div class="skill-bar-fill w-[95%]"></div></div>
+                        </div>
+                        <div>
+                            <p class="font-medium mb-1">Hardware Diagnosis & RMA</p>
+                            <div class="skill-bar"><div class="skill-bar-fill w-[85%]"></div></div>
+                        </div>
+                        <div>
+                            <p class="font-medium mb-1">Networking (LAN, Server 2016)</p>
+                            <div class="skill-bar"><div class="skill-bar-fill w-[70%]"></div></div>
+                        </div>
+                        <div>
+                            <p class="font-medium mb-1">Web Dev Basics (HTML/CSS/JS/C)</p>
+                            <div class="skill-bar"><div class="skill-bar-fill w-[65%]"></div></div>
+                        </div>
+
+                        <p class="font-medium pt-2 secondary-color">Keywords:</p>
+                        <p class="text-xs">C, Java, HTML, CSS, E-CAD, Circuit Maker, Windows Server 2016, LAN, Switch/Router/AP Configuration, Troubleshooting.</p>
+                    </div>
+                </section>
+
+                <!-- Language Proficiency -->
+                <section>
+                    <h3 class="text-lg font-semibold border-b-2 border-secondary-teal pb-1 mb-3 uppercase tracking-wider">Languages</h3>
+                    <ul class="text-sm space-y-1">
+                        <li><span class="font-medium">Bengali:</span> High (Reading, Writing, Speaking)</li>
+                        <li><span class="font-medium">English:</span> Medium (Reading, Writing, Speaking)</li>
+                        <li><span class="font-medium">Arabic:</span> Low (Reading, Writing, Speaking)</li>
+                    </ul>
+                </section>
+
+                <!-- Other Activities -->
+                <section>
+                    <h3 class="text-lg font-semibold border-b-2 border-secondary-teal pb-1 mb-3 uppercase tracking-wider">Activities</h3>
+                    <ul class="text-sm list-disc list-inside space-y-1 ml-4">
+                        <li>Computer Hardware & Software Maintenance</li>
+                        <li>Diagnosis & Troubleshooting of Electronics (TV/Devices)</li>
+                        <li>Video Editing, Photography, Exploring New Places</li>
+                    </ul>
+                </section>
+                
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT (Right Column: 2/3 width on desktop, full width on mobile) -->
+        <main class="p-6 md:p-8 col-span-2 bg-light-gray text-gray-800">
+
+            <!-- Objective & Summary -->
+            <section class="mb-8 p-4 bg-white rounded-lg border-l-4 border-primary-blue shadow-md">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-xl font-bold secondary-color uppercase tracking-wider">Profile & Objective</h3>
+                    <button id="refineObjectiveBtn" 
+                            class="llm-button bg-primary-blue text-white text-xs px-3 py-1 rounded-full flex items-center hover:bg-opacity-90 transition duration-150 ease-in-out"
+                            onclick="openObjectiveModal()">
+                        ✨ Refine Objective
+                    </button>
                 </div>
-            </li>
-            <li>
-              <div class="date">2015 - 2016</div>
-              <div class="info">
-                     <p class="semi-bold">Irani Borka Bazar</p> 
-                  <p>Showroom Manager</p>
-              </div>
-            </li>
-        </ul>
-    </div>
-    <div class="resume_item resume_education">
-      <div class="title">
-           <p class="bold">Education</p>
-         </div>
-      <ul>
-            <li>
-                <div class="date">2017 - Present</div> 
-                <div class="info">
-                     <p class="semi-bold">Eastern University</p> 
-                  <p>Bachelor of Sciences in Computer Science Engineering</p>
+                <p id="objective-text" class="text-sm leading-relaxed text-gray-600">
+                    To leverage a versatile background in IT Service, RMA, and Customer Support (CS) to secure a challenging role in an MNC, Software Firm, or Engineering Company. Committed to building a long-term engineering career by combining technical diagnostic skills with proven customer-facing and team-handling abilities for effective problem resolution and service excellence.
+                </p>
+                <div id="objective-loading" class="hidden mt-2 text-sm text-center text-primary-blue">
+                    <div class="loading-spinner mx-auto mb-1"></div> Generating new objective...
                 </div>
-            </li>
-            <li>
-              <div class="date">2010 - 2015</div>
-              <div class="info">
-                     <p class="semi-bold">Institute of Technical and Vocational Education and Training, Dhaka (AUST)</p> 
-                  <p>Diploma in Electronics Engineering</p>
+            </section>
+            
+            <!-- Employment History -->
+            <section class="mb-8">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-xl font-bold text-primary-blue border-b-2 border-gray-300 pb-2 uppercase tracking-wider">Employment History</h3>
+                    <button id="interviewQuesBtn" 
+                            class="llm-button bg-secondary-teal text-white text-xs px-3 py-1 rounded-full flex items-center hover:bg-opacity-90 transition duration-150 ease-in-out"
+                            onclick="generateInterviewQuestion()">
+                        ✨ Get Practice Question
+                    </button>
                 </div>
-            </li>
-        </ul>
+                
+                <!-- Generated Interview Question Box -->
+                <div id="interview-question-box" class="hidden p-4 mb-4 bg-yellow-100 rounded-lg border-l-4 border-yellow-500 shadow-sm">
+                    <p class="font-semibold text-yellow-700 mb-2">Practice Interview Question:</p>
+                    <p id="interview-question-text" class="text-sm text-gray-700 italic"></p>
+                    <div id="question-loading" class="hidden mt-2 text-sm text-center text-yellow-700">
+                        <div class="loading-spinner mx-auto mb-1 border-top-yellow"></div> Generating question...
+                    </div>
+                </div>
+
+                <!-- Job 1: Executive - RMA & Service -->
+                <div class="relative pl-6 pb-6 border-l-2 border-secondary-teal ml-2">
+                    <span class="absolute -left-2 top-0 w-4 h-4 secondary-bg rounded-full border-2 border-white"></span>
+                    <p class="text-xs font-semibold text-gray-500 mb-1">April 2023 - Present</p>
+                    <h4 class="text-lg font-semibold text-gray-800">Executive - RMA & Service (Full Time)</h4>
+                    <p class="text-sm font-medium text-secondary-teal mb-2">Global Brand Pvt Ltd</p>
+                    <ul class="text-sm text-gray-600 list-disc list-outside space-y-1 ml-4">
+                        <li>Managed customer RMA claims, meticulously checking products for physical damage before lab testing.</li>
+                        <li>Handled product stock, facilitating replacements and coordinating branch-wise product distributions.</li>
+                        <li>Maintained clear customer communication via Email/SMS regarding claim status and return schedules.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2: CXP Agent - CS Inbound -->
+                <div class="relative pl-6 pb-6 border-l-2 border-secondary-teal ml-2">
+                    <span class="absolute -left-2 top-0 w-4 h-4 secondary-bg rounded-full border-2 border-white"></span>
+                    <p class="text-xs font-semibold text-gray-500 mb-1">Oct 2022 - April 2023</p>
+                    <h4 class="text-lg font-semibold text-gray-800">CXP Agent - CS Inbound (Full Time)</h4>
+                    <p class="text-sm font-medium text-secondary-teal mb-2">Daraz Bangladesh Ltd</p>
+                    <ul class="text-sm text-gray-600 list-disc list-outside space-y-1 ml-4">
+                        <li>Resolved complex customer issues and provided effective solutions by rigorously following Standard Operating Procedures (SOP).</li>
+                        <li>Identified and addressed diverse customer needs, enhancing overall Customer Experience (CXP).</li>
+                    </ul>
+                </div>
+                
+                <!-- Job 3: Sales Executive & site Engr -->
+                <div class="relative pl-6 pb-6 border-l-2 border-secondary-teal ml-2">
+                    <span class="absolute -left-2 top-0 w-4 h-4 secondary-bg rounded-full border-2 border-white"></span>
+                    <p class="text-xs font-semibold text-gray-500 mb-1">June 2016 - Sept 2017</p>
+                    <h4 class="text-lg font-semibold text-gray-800">Sales Executive & Site Engineer (Full Time)</h4>
+                    <p class="text-sm font-medium text-secondary-teal mb-2">Sis Engineering</p>
+                    <ul class="text-sm text-gray-600 list-disc list-outside space-y-1 ml-4">
+                        <li>Performed operation, maintenance, and service/support tasks at various sites.</li>
+                        <li>Served as Site Supervisor, ensuring project requirements were met.</li>
+                    </ul>
+                </div>
+
+                <!-- Volunteer (Part-time) - Cloud Marcom -->
+                <div class="relative pl-6 pb-6 border-l-2 border-secondary-teal ml-2">
+                    <span class="absolute -left-2 top-0 w-4 h-4 secondary-bg rounded-full border-2 border-white"></span>
+                    <p class="text-xs font-semibold text-gray-500 mb-1">Dec 2019 - Continuing</p>
+                    <h4 class="text-lg font-semibold text-gray-800">Volunteer (Part-time)</h4>
+                    <p class="text-sm font-medium text-secondary-teal mb-2">Cloud Marcom</p>
+                    <ul class="text-sm text-gray-600 list-disc list-outside space-y-1 ml-4">
+                        <li>Contribute expertise in IT Application support, logistics, implementation, and team handling.</li>
+                    </ul>
+                </div>
+                
+            </section>
+
+            <!-- Academic Qualification -->
+            <section class="mb-8">
+                <h3 class="text-xl font-bold text-primary-blue border-b-2 border-gray-300 pb-2 mb-4 uppercase tracking-wider">Academic Qualification</h3>
+                
+                <div class="mb-4 p-3 bg-white rounded-lg shadow-sm border-l-4 border-secondary-teal">
+                    <h4 class="text-lg font-semibold text-gray-800">Bachelor of Science (BSc) in Computer Science & Engineering</h4>
+                    <p class="text-sm font-medium text-gray-600">Eastern University - <span class="secondary-color">2023</span></p>
+                    <p class="text-xs text-gray-500 mt-1">Obtained: C.G.P.A-3.05 (1st Class)</p>
+                </div>
+
+                <div class="p-3 bg-white rounded-lg shadow-sm border-l-4 border-secondary-teal">
+                    <h4 class="text-lg font-semibold text-gray-800">Diploma in Electronics Engineering</h4>
+                    <p class="text-sm font-medium text-gray-600">Institute of Technical and Vocational Education and Training (AUST) - <span class="secondary-color">2015</span></p>
+                    <p class="text-xs text-gray-500 mt-1">Obtained: C.G.P.A-2.61 (2nd Class)</p>
+                </div>
+            </section>
+            
+        </main>
+        
+        <!-- MODAL for Objective Refinement -->
+        <div id="objectiveModal" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden items-center justify-center p-4 z-50">
+            <div class="bg-white rounded-lg p-6 w-full max-w-md shadow-2xl">
+                <h3 class="text-xl font-bold text-primary-blue mb-4">Refine Career Objective</h3>
+                <p class="text-sm text-gray-600 mb-4">Enter the target role (e.g., "IT Support Specialist" or "Customer Success Manager") to tailor your objective:</p>
+                <input type="text" id="targetRoleInput" placeholder="Target Role" class="w-full p-2 mb-4 border border-gray-300 rounded-md focus:ring-secondary-teal focus:border-secondary-teal">
+                <div class="flex justify-end space-x-3">
+                    <button onclick="closeObjectiveModal()" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-lg hover:bg-gray-400">Cancel</button>
+                    <button onclick="refineObjective()" id="generateObjectiveBtn" class="px-4 py-2 bg-secondary-teal text-white rounded-lg hover:bg-primary-blue flex items-center">
+                        Generate
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript for simple interaction (Typewriter effect) and API Calls -->
+        <script>
+            const API_KEY = ""; // Placeholder for Canvas environment
+            const LLM_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${API_KEY}`;
+            
+            // --- LLM Utility Functions ---
+            
+            async function callLLM(prompt, useGrounding = false, systemInstruction = null) {
+                const payload = {
+                    contents: [{ parts: [{ text: prompt }] }],
+                    tools: useGrounding ? [{ "google_search": {} }] : undefined,
+                    systemInstruction: systemInstruction ? { parts: [{ text: systemInstruction }] } : undefined,
+                };
+
+                let response = null;
+                const maxRetries = 3;
+                let delay = 1000;
+
+                for (let i = 0; i < maxRetries; i++) {
+                    try {
+                        response = await fetch(LLM_API_URL, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        
+                        if (response.ok) {
+                            const result = await response.json();
+                            const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                            if (text) return text;
+                            throw new Error('LLM response missing text content.');
+                        } else if (response.status === 429 && i < maxRetries - 1) {
+                            // Too many requests - retry with exponential backoff
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                            delay *= 2;
+                        } else {
+                            throw new Error(`API error: ${response.statusText}`);
+                        }
+                    } catch (error) {
+                        console.error('LLM call failed:', error);
+                        if (i === maxRetries - 1) throw error;
+                    }
+                }
+                throw new Error("LLM call failed after multiple retries.");
+            }
+
+            // --- UI/Interaction Functions ---
+
+            // 1. Typewriter Effect
+            document.addEventListener('DOMContentLoaded', () => {
+                const element = document.getElementById('objective-text');
+                const fullText = element.textContent.trim();
+                element.textContent = '';
+                let i = 0;
+                
+                function typeWriter() {
+                    if (i < fullText.length) {
+                        element.textContent += fullText.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 15);
+                    }
+                }
+                
+                if (window.matchMedia('print').matches === false) {
+                    typeWriter();
+                } else {
+                    element.textContent = fullText;
+                }
+            });
+
+            // 2. Objective Refinement Modal
+            function openObjectiveModal() {
+                document.getElementById('objectiveModal').classList.remove('hidden');
+                document.getElementById('objectiveModal').classList.add('flex');
+            }
+
+            function closeObjectiveModal() {
+                document.getElementById('objectiveModal').classList.remove('flex');
+                document.getElementById('objectiveModal').classList.add('hidden');
+            }
+
+            async function refineObjective() {
+                const targetRole = document.getElementById('targetRoleInput').value.trim();
+                const objectiveTextElement = document.getElementById('objective-text');
+                const objectiveLoading = document.getElementById('objective-loading');
+                const currentObjective = objectiveTextElement.textContent.trim();
+
+                if (!targetRole) {
+                    // Use a custom message box instead of alert()
+                    const message = "Please enter a target role (e.g., 'IT Support Specialist') to refine the objective.";
+                    console.log("Refinement Error:", message);
+                    // Since a modal system is complex for one file, we'll use a temporary button text change
+                    document.getElementById('targetRoleInput').placeholder = "Target Role is required!";
+                    return;
+                }
+                
+                closeObjectiveModal(); // Close the input modal
+                objectiveTextElement.style.opacity = '0.5';
+                objectiveLoading.classList.remove('hidden');
+
+                const systemInstruction = "You are a world-class professional resume editor. Your task is to rewrite a career objective to be highly targeted and concise (max 3 sentences) for a specific role, leveraging the candidate's existing experience.";
+                const prompt = `Rewrite the following career objective to target the role of "${targetRole}". The candidate's background includes RMA, IT Service, and Customer Support. \n\nOriginal Objective: "${currentObjective}"`;
+
+                try {
+                    const newObjective = await callLLM(prompt, false, systemInstruction);
+                    objectiveTextElement.textContent = newObjective;
+                    objectiveTextElement.style.opacity = '1';
+
+                } catch (error) {
+                    objectiveTextElement.textContent = "Error refining objective. Please check the console for details.";
+                    objectiveTextElement.style.opacity = '1';
+                } finally {
+                    objectiveLoading.classList.add('hidden');
+                }
+            }
+            
+            // 3. Interview Question Generator
+            async function generateInterviewQuestion() {
+                const questionBox = document.getElementById('interview-question-box');
+                const questionText = document.getElementById('interview-question-text');
+                const questionLoading = document.getElementById('question-loading');
+                
+                questionBox.classList.remove('hidden');
+                questionText.textContent = '';
+                questionLoading.classList.remove('hidden');
+
+                // FIX: Use a more reliable selector to get the *first* job entry
+                // The Employment History section is the second section in main (index 1)
+                const employmentHistorySection = document.querySelector('#resume main section:nth-child(2)');
+                // The first job entry is the first div with the class 'relative pl-6' inside that section.
+                const latestJob = employmentHistorySection.querySelector('div.relative.pl-6'); 
+                
+                // Check if the element was found before trying to access its properties
+                if (!latestJob) {
+                    questionText.textContent = "Error: Could not find the latest job entry on the resume to generate a question.";
+                    questionLoading.classList.add('hidden');
+                    return;
+                }
+                
+                const jobTitle = latestJob.querySelector('h4')?.textContent.trim() || 'RMA/Service Executive';
+                // Get all list items and join them for the duties description
+                const jobDuties = Array.from(latestJob.querySelectorAll('li')).map(li => li.textContent.trim()).join('; ') || 'Handling customer RMA claims and coordinating product distribution.';
+
+                const systemInstruction = "You are an expert interviewer specializing in IT Support and RMA roles. Generate one challenging, relevant behavioral interview question that directly relates to the candidate's experience and requires them to demonstrate critical thinking or problem-solving skills, based on current industry standards. Do not include the answer.";
+                
+                const prompt = `Based on the following job role and duties, generate a single, specific behavioral interview question: \n\nRole: ${jobTitle}\nDuties: ${jobDuties}`;
+
+                try {
+                    const question = await callLLM(prompt, true, systemInstruction); // Use search grounding
+                    questionText.textContent = question;
+
+                } catch (error) {
+                    questionText.textContent = "Failed to generate interview question. Please try again later. (API Error)";
+                } finally {
+                    questionLoading.classList.add('hidden');
+                }
+            }
+
+        </script>
     </div>
-    <div class="resume_item resume_hobby">
-      <div class="title">
-           <p class="bold">Hobby</p>
-         </div>
-         <div class="hobby_item">
-            <ul>
-              <li><i class="fas fa-book"></i></li>
-              <li><i class="fas fa-gamepad"></i></li>
-              <li><i class="fas fa-music"></i></li>
-              <li><i class="fab fa-pagelines"></i></li>
-          </ul>
-         </div>
-       
-    </div>
-  </div>
-</div>
 
 </body>
 </html>
